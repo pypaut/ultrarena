@@ -1,0 +1,30 @@
+[] - STEP 0
+    [X] - DISPLAY BLACK WINDOW
+    [X] - QUIT WITH ESC KEY
+    [] - GIT IMPORT: CLEAN & COMPILE
+    [] - START REFACTORING
+
+[] - STEP 1
+    [] - SINGLE IMAGE CHARACTER
+    [] - MOVESET
+        [] - GO LEFT
+        [] - GO RIGHT
+
+[] - STEP 2
+    [] - BACKGROUND IMAGE
+    [] - ENABLE SPRITE ANIMATION
+    [] - JUMP
+
+[] - STEP 3
+    [] - ADD BLOCKS
+
+
+
+
+
+
+
+
+BUGTRACKER:
+    [X] - ADD FLAGS FOR SDL2
+    [] - EVENTS: KEYBOARD (QUIT WITH ESC KEY)
