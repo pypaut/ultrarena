@@ -50,7 +50,7 @@ struct map
 
 
 /* Event */
-void handle_event(SDL_Revent event);
+void handle_event(SDL_Event event);
 
 
 

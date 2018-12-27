@@ -31,7 +31,7 @@ int main(void)
 
 
   /* Character */
-  SDL_Surface * image = SDL_LoadBMP("../pictures/sprite01.png");
+  //SDL_Surface * image = SDL_LoadBMP("../pictures/sprite01.png");
 
 
   SDL_Event event;

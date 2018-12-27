@@ -4,13 +4,18 @@ project(UltrArena LANGUAGES C)
 include_directories(
     ${CMAKE_SOURCE_DIR}/src
     ${CMAKE_SOURCE_DIR}/src/includes
+    /usr/include/sdl
     )
 
+#add_compile_options(`pkg-config --cflags --libs sdl2`)
 add_compile_options(-Wall -Werror -Wextra -pedantic -std=c99 -g)
-add_compile_options(-fsanitize=address)
+add_compile_options(-I/usr/include/sdl)
+#add_compile_options(-fsanitize=address)
 
 add_executable(ultrarena src/main.c
+    #                         src/events/handle_event.c
     )
 
 
-target_link_libraries(ultrarena PRIVATE -lasan)
+#target_link_libraries(ultrarena PRIVATE -lasan)
+target_link_libraries(ultrarena PRIVATE -lsdl)
