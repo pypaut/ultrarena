@@ -1,4 +1,4 @@
-# ultrarena
+# UltrArena
 
 ## Introduction
 The goal of this project is to create an arcade game, which we will be able to update & upgrade easily (more moves, more characters, more maps...).

@@ -6,29 +6,29 @@
 
 struct character
 {
-  char *name;
-  int hp;
-  int mana;
-  int stam;
-  SDL_Rect *rect;
+    char *name;
+    int hp;
+    int mana;
+    int stam;
+    SDL_Rect *rect;
 
     /* Sprites */
-  char **r_run_sprite;
-  char **l_run_sprite;
-  int run_len;
+    char **r_run_sprite;
+    char **l_run_sprite;
+    int run_len;
 
-  char **r_jump_sprite;
-  char **l_jump_sprite;
-  int jump_len;
+    char **r_jump_sprite;
+    char **l_jump_sprite;
+    int jump_len;
 
     /* Super sprites */
-  char **r_run_sprite_sup;
-  char **l_run_sprite_sup;
-  int run_len_sup;
+    char **r_run_sprite_sup;
+    char **l_run_sprite_sup;
+    int run_len_sup;
 
-  char **r_jump_sprite_sup;
-  char **l_jump_sprite_sup;
-  int jump_len_sup;
+    char **r_jump_sprite_sup;
+    char **l_jump_sprite_sup;
+    int jump_len_sup;
 
     /* Musics */
     /* Victory, defeat sound */
@@ -38,16 +38,21 @@ struct character
 
 struct map
 {
-  char *name;
-  char *background;
+    char *name;
+    char *background;
 
-  char *block_sprite;
-  int nb_blocks;
+    char *block_sprite;
+    int nb_blocks;
 
-  struct character *enemies;
-  int nb_enemies;
+    struct character *enemies;
+    int nb_enemies;
 };
 
+
+/* Init */
+void init(void);
+SDL_Window *init_window(void);
+SDL_Renderer *init_renderer(SDL_Window *win);
 
 /* Event */
 void handle_event(SDL_Event event);
