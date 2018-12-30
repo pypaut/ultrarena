@@ -55,9 +55,11 @@ SDL_Window *init_window(void);
 SDL_Renderer *init_renderer(SDL_Window *win);
 
 /* Event */
-void handle_event(SDL_Event event);
+int handle_event(SDL_Event event, SDL_Renderer *renderer);
 
 
+/* Free */
+void free_all(SDL_Window *window, SDL_Renderer *renderer, SDL_Surface *surface);
 
 
 #endif

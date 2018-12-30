@@ -1,22 +1,27 @@
-[] - STEP 0
+[X] - STEP 0
     [X] - DISPLAY BLACK WINDOW
     [X] - QUIT WITH ESC KEY
     [X] - GIT IMPORT: CLEAN & COMPILE
-    [] - START REFACTORING
+    [X] - START REFACTORING
 
 [] - STEP 1
     [] - SINGLE IMAGE CHARACTER
-    [] - MOVESET
+    [] - SIMPLE MOVESET
         [] - GO LEFT
         [] - GO RIGHT
+        [] - JUMP
 
 [] - STEP 2
-    [] - BACKGROUND IMAGE
-    [] - ENABLE SPRITE ANIMATION
-    [] - JUMP
+    [] - SOLID BLOCKS ACROSS THE MAP
+
 
 [] - STEP 3
-    [] - ADD BLOCKS
+    [] - SPRITE ANIMATION
+    [] - ATTACKS & HITBLOX (UNMOVING TARGET)
+        [] - CHANGES COLOR WHEN TOUCHED...
+
+[] - STEP 4
+    [] - ENEMY AI
 
 
 
@@ -27,4 +32,5 @@
 
 BUGTRACKER:
     [X] - ADD FLAGS FOR SDL2
-    [] - EVENTS: KEYBOARD (QUIT WITH ESC KEY)
+    [X] - EVENTS: KEYBOARD (QUIT WITH ESC KEY)
+    [] - GAME LOOP: handle_event UPDATES & RENDERS?

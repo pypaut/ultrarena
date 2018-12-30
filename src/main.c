@@ -1,14 +1,14 @@
-#include "include/header.h"
+#include "header.h"
 
 int main(void)
 {
     /* Initialization */
     init();
-    SDL_Window *win = init_window();
-    SDL_Renderer *renderer = init_renderer(win);
+    SDL_Window *window = init_window();
+    SDL_Renderer *renderer = init_renderer(window);
 
     /* Character */
-    //SDL_Surface * image = SDL_LoadBMP("../pictures/sprite01.png");
+    SDL_Surface *surface = SDL_LoadBMP("../../santa_sprite.bmp");
 
     SDL_Event event;
 
@@ -19,23 +19,8 @@ int main(void)
     {
         /* Event */
         if (SDL_PollEvent(&event))
-        { 
-            if (event.key.keysym.sym == SDLK_ESCAPE)
-                running = 0;
-
-            else if (event.key.keysym.sym == SDLK_RIGHT)
-            {
-                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-                SDL_RenderClear(renderer);
-                SDL_RenderPresent(renderer);
-            }
-
-            else if (event.type == SDL_KEYDOWN)
-            {
-                SDL_SetRenderDrawColor(renderer, rand() % 255, rand() % 255, rand() % 255, 255);
-                SDL_RenderClear(renderer);
-                SDL_RenderPresent(renderer);
-            }
+        {
+            running = handle_event(event, renderer);
         }
 
         /* Update */
@@ -43,9 +28,7 @@ int main(void)
         /* Render */
     }
 
+    free_all(window, renderer, surface);
 
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(win);
-    SDL_Quit();
     return 0;
 }
